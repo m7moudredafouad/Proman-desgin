@@ -1,0 +1,105 @@
+.tasks {
+	display: flex;
+	flex-direction: column;
+	background-color: $tasksColor;
+	color: $white;
+	overflow-y: auto;
+
+	&__projectInfo {
+		width: 100%;
+		background-color: $headerColor;
+		@include flexRow;
+		justify-content: space-between;
+		padding: 0.5rem;
+
+		@include respond(v600){
+			padding: 0.5rem;
+		}
+
+		&-name {
+			font-size: 2rem;
+			@include respond(v900){
+				font-size: 1.6rem;
+			}
+
+			@include respond(v600){
+				font-size: 1.4rem;
+			}
+		}
+
+		&-actions {
+			& svg {
+				height: 2rem;
+				width: 2rem;
+				fill: $white;
+				padding: 0;
+
+				@include respond(v600){
+					height: 1.5rem;
+					width: 1.5rem;
+				}
+			}
+		}
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(4, 24.5%);
+		gap: 0.5rem;
+		
+		@include respond(v1400) {
+			grid-template-columns: repeat(3, 33%);
+		}
+
+		@include respond(v1100) {
+			grid-template-columns: repeat(2, 49.5%);
+		}
+
+		@include respond(v800) {
+			grid-template-columns: repeat(1, 100%);
+		}
+
+		& > .task {
+			& > .task__info {
+				background-color: $firstTaskColor;
+			}
+		}
+	}
+}
+
+.task {
+	width: 100%;
+
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		transition: 0.4s;
+		padding: 1rem 0.5rem;
+
+		&-data {
+			display: flex;
+		}
+
+		&-done {
+			margin-right: 1rem;
+		}
+
+		&-title {
+			font-size: 1.6rem;
+		}
+
+		& svg {
+			width: 2rem;
+			height: 2rem;
+			fill: $white;
+		}
+
+		&:hover {
+			background-color: rgba(white, 0.1);
+		}
+	}
+
+	&__subTasks {
+		padding: 0 .5rem 0 1rem;
+	}
+}

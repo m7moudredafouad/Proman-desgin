@@ -1,0 +1,36 @@
+.nav {
+	grid-row: 1/2;
+	@include flexRow;
+	justify-content: space-between;
+	padding: 0 4rem;
+	background-color: $navColor;
+	width: 100%;
+	color: $white;
+
+	&__logo {
+		text-transform: uppercase;
+		font-size: 2.2rem;
+		font-weight: 500;
+		letter-spacing: 0.5rem;
+
+		& span {
+			color: $redColor;
+		}
+	}
+
+	&__user {
+		@include flexRow;
+		&-links {
+			padding: 1rem;
+			font-size: 1.8rem;
+			& svg {
+				width: 2rem;
+				height: 2rem;
+				fill: $white;
+			}
+			&:hover {
+				background-color: rgba($white, 0.2);
+			}
+		}
+	}
+}

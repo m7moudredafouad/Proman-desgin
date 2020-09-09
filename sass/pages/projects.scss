@@ -1,0 +1,113 @@
+.container__projects {
+	display: grid;
+	grid-template-columns: 20vw 80vw;
+
+	@include respond(v900) {
+		grid-template-columns: 30vw 70vw;
+	}
+}
+
+.projects {
+	overflow: hidden;
+	height: 100%;
+	color: $white;
+	background-color: $projectsColor;
+	display: flex;
+	flex-direction: column;
+
+	&__top {
+		&-logo {
+			text-transform: uppercase;
+			font-size: 2.2rem;
+			font-weight: 500;
+			letter-spacing: 0.5rem;
+			padding: 1rem 0;
+			text-align: center;
+
+			& span {
+				color: $redColor;
+			}
+
+			@include respond(v600){
+				font-size: 1.8rem;
+			}
+
+			@include respond(v400){
+				font-size: 1.4rem;
+				letter-spacing: 0.2rem;
+			}
+		}
+
+		&-welcome {
+			font-size: 1.8rem;
+			text-transform: uppercase;
+			// padding: 1rem 0;
+			opacity: 0.8;
+			text-align: center;
+		}
+
+		&-add {
+			font-size: 1.6rem;
+			font-weight: 600;
+			width: 100%;
+			padding: 1rem 0;
+			text-transform: uppercase;
+			text-align: center;
+
+			@include respond(v600){
+				font-weight: 400;
+				font-size: 1.4rem;
+			}
+			@include respond(v400){
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	&__middle {
+		flex: 1;
+		overflow-y: auto;
+
+		&-list {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			overflow-y: auto;
+			&--item {
+				font-size: 1.2rem;
+				padding: 1rem;
+				overflow-x: hidden;
+				&:hover {
+					background-color: rgba($white, 0.2);
+				}
+			}
+		}
+	}
+
+	&__end {
+		display: flex;
+		justify-content: space-between;
+
+		&-links {
+			padding: 1rem;
+			& svg {
+				width: 3rem;
+				height: 3rem;
+				fill: $white;
+
+				@include respond(v900){
+					height: 2rem;
+					width: 2rem;
+				}
+
+				@include respond(v600){
+					height: 1.5rem;
+					width: 1.5rem;
+				}
+			}
+			&:hover {
+				background-color: rgba($white, 0.2);
+			}
+		}
+	}
+}

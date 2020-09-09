@@ -1,0 +1,76 @@
+$mainColor: #2c3e50;
+$white: #ecf0f1;
+$navColor: #2c3e50;
+$redColor: #e74c3c;
+$blueColor: #3498db;
+$darkBlueColor: #2980b9;
+// $tasksColor: #313131;
+// $headerColor: #191919;
+// $firstTaskColor: #272727;
+
+$headerColor: #111;
+$firstTaskColor: #222;
+$tasksColor: #333;
+$projectsColor: #444;
+
+$sidebarColor: #1f4068;
+$lightBlue: #42bdb4;
+$transTime: 0.4s;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 0.3rem;
+	height: .3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: rgba($white, .3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: rgba($white, .5);
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+
+	line-height: 1.6;
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: 100vh;
+}

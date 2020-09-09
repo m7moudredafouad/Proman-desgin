@@ -1,0 +1,32 @@
+.btn {
+	font-family: Arial, Helvetica, sans-serif;
+	background: none;
+	cursor: pointer;
+	padding: 0.5rem 2rem;
+	color: $white;
+	font-size: 2rem;
+	border: none;
+	outline: none;
+
+	transition: $transTime;
+
+	@include respond(v800) {
+		padding: 0.3rem 1.3rem;
+		font-size: 1.8rem;
+	}
+
+	@include respond(v600) {
+		padding: 0.2rem 1.2rem;
+		font-size: 1.6rem;
+	}
+
+	&-blue {
+		background-color: $headerColor;
+		border: 0.2rem solid $headerColor;
+
+		&:hover {
+			background-color: lighten($headerColor, 5);
+			border: 0.2rem solid lighten($headerColor, 5);
+		}
+	}
+}
